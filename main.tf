@@ -12,15 +12,11 @@ resource "azurerm_resource_group" "main1" {
   name     = "terraform-multi-subscription1"
   location = "North Central US"
   
-  providers = {
-    azurerm = azurerm.azure1
-  }
+  providers = azurerm.azure1
 }
 resource "azurerm_resource_group" "main2" {
   name     = "terraform-multi-subscription2"
   location = "North Central US"
   
-  providers = {
-    azurerm = azurerm.azure2
-  }
+  providers = azurerm.azure2
 }
